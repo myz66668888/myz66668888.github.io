@@ -61,10 +61,22 @@
         <content type="html"><![CDATA[<h1 id="文章生成永久链接"><a href="#文章生成永久链接" class="headerlink" title="文章生成永久链接"></a>文章生成永久链接</h1><p>使用 hexo-abbrlink 的 Hexo 插件来实现文章生成永久链接，安装命令如下：<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><br>在 Hexo <code>根目录下的 _config.yml</code> 文件中，新增以下的配置项：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abbrlink: </span><br><span class="line">    alg: crc16   #算法：</span><br><span class="line">    rep: hex     #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制</span><br></pre></td></tr></table></figure><p>将 <code>_config.yml</code> 文件中的 <code>permalink</code> 的值修改为如下内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink</span><br></pre></td></tr></table></figure><p>执行 <code>hexo clean &amp;&amp; hexo g </code>重新生成博客文件，就可以生成永久链接。生成完后，原 md 文件的 Front-matter 内会增加 abbrlink 字段，值为生成的 ID 。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 永久链接 </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> -hexo -永久链接 -git -anzhiyu </tag>
+            <tag> hexo </tag>
+            
+            <tag> git </tag>
+            
+            <tag> anzhiyu </tag>
+            
+            <tag> 永久链接 </tag>
             
         </tags>
       

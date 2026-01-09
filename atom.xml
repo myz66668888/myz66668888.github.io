@@ -81,7 +81,7 @@
     <link href="http://example.com/posts/fb4c.html"/>
     <id>http://example.com/posts/fb4c.html</id>
     <published>2026-01-07T06:01:36.000Z</published>
-    <updated>2026-01-08T01:35:11.503Z</updated>
+    <updated>2026-01-09T08:19:21.139Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文章生成永久链接"><a href="#文章生成永久链接" class="headerlink" title="文章生成永久链接"></a>文章生成永久链接</h1><p>使用 hexo-abbrlink 的 Hexo 插件来实现文章生成永久链接，安装命令如下：<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><br>在 Hexo <code>根目录下的 _config.yml</code> 文件中，新增以下的配置项：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abbrlink: </span><br><span class="line">    alg: crc16   #算法：</span><br><span class="line">    rep: hex     #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制</span><br></pre></td></tr></table></figure><p>将 <code>_config.yml</code> 文件中的 <code>permalink</code> 的值修改为如下内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink</span><br></pre></td></tr></table></figure><p>执行 <code>hexo clean &amp;&amp; hexo g </code>重新生成博客文件，就可以生成永久链接。生成完后，原 md 文件的 Front-matter 内会增加 abbrlink 字段，值为生成的 ID 。</p>]]></content>
     
@@ -96,8 +96,16 @@
     
     
     
+    <category term="永久链接" scheme="http://example.com/categories/%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/"/>
     
-    <category term="-hexo -永久链接 -git -anzhiyu" scheme="http://example.com/tags/hexo-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5-git-anzhiyu/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+    <category term="anzhiyu" scheme="http://example.com/tags/anzhiyu/"/>
+    
+    <category term="永久链接" scheme="http://example.com/tags/%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/"/>
     
   </entry>
   
