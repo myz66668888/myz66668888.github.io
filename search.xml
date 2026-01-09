@@ -34,6 +34,12 @@
         <content type="html"><![CDATA[<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h3><p>要为 AnZhiYu 配上字数统计特性, 你需要如下几个步骤:</p><p>打开 hexo 工作目录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure><p>修改 主题配置文件:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wordcount:</span><br><span class="line">  enable: true</span><br><span class="line">  post_wordcount: true</span><br><span class="line">  min2read: true</span><br><span class="line">  total_wordcount: true</span><br></pre></td></tr></table></figure>]]></content>
       
       
+      <categories>
+          
+          <category> 字数统计 </category>
+          
+      </categories>
+      
       
         <tags>
             
@@ -73,6 +79,12 @@
       
         <content type="html"><![CDATA[<h1 id="页面配置"><a href="#页面配置" class="headerlink" title="页面配置"></a>页面配置</h1><h2 id="标签页配置"><a href="#标签页配置" class="headerlink" title="标签页配置"></a>标签页配置</h2><p>前往你的 Hexo 博客的根目录<br>在 Hexo 博客根目录 <code>[blog]</code>下打开终端，输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>你会找到 <code>source/tags/index.md</code> 这个文件</p><p>修改这个文件： 记得添加 <code>type: &quot;tags&quot;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">markdown</span><br><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-04-06 12:01:51</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">top_img: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
       
+      
+      <categories>
+          
+          <category> 页面配置 </category>
+          
+      </categories>
       
       
         <tags>
