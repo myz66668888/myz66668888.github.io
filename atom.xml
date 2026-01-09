@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>马滢臻</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2026-01-08T05:59:51.425Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>mayingzhen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>添加今日诗词</title>
+    <link href="http://example.com/posts/d581.html"/>
+    <id>http://example.com/posts/d581.html</id>
+    <published>2026-01-08T05:52:30.000Z</published>
+    <updated>2026-01-08T05:59:51.425Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h3><p>主题新建themes&#x2F;anzhiyu&#x2F;layout&#x2F;includes&#x2F;widget&#x2F;card_poem.pug，内容如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#card-poem.card-widget</span><br><span class="line">    #poem_sentence</span><br><span class="line">    #poem_info</span><br><span class="line">        #poem_dynasty</span><br><span class="line">        #poem_author</span><br><span class="line">script(src=&#x27;https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js&#x27;, charset=&#x27;utf-8&#x27;)</span><br><span class="line">script(type=&#x27;text/javascript&#x27;).</span><br><span class="line">  jinrishici.load(function(result) &#123;</span><br><span class="line">  var sentence = document.querySelector(&quot;#poem_sentence&quot;)</span><br><span class="line">  var author = document.querySelector(&quot;#poem_author&quot;)</span><br><span class="line">  var dynasty = document.querySelector(&quot;#poem_dynasty&quot;)</span><br><span class="line"></span><br><span class="line">  var sentenceText = result.data.content</span><br><span class="line">  sentenceText = sentenceText.substr(0, sentenceText.length - 1);</span><br><span class="line">  sentence.innerHTML = sentenceText</span><br><span class="line">  dynasty.innerHTML = result.data.origin.dynasty</span><br><span class="line">  author.innerHTML = result.data.origin.author + &#x27;《&#x27; + result.data.origin.title + &#x27;》&#x27;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure><h3 id="引入组件"><a href="#引入组件" class="headerlink" title="引入组件"></a>引入组件</h3><p>在<code>themes/anzhiyu/layout/includes/widget/index.pug</code>中你需要的位置添加以下内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!=partial(&#x27;includes/widget/card_poem&#x27;, &#123;&#125;, &#123;cache: true&#125;)</span><br></pre></td></tr></table></figure><h3 id="引入CSS"><a href="#引入CSS" class="headerlink" title="引入CSS"></a>引入CSS</h3><p>在主题配置文件中添加</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">inject:</span><br><span class="line">head:</span><br><span class="line"></span><br><span class="line">-</span><br></pre></td></tr></table></figure><p>heoMainColor.css</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css&quot;&gt;</span><br></pre></td></tr></table></figure><p>引用主css</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/poem.css&quot;&gt;</span><br></pre></td></tr></table></figure><p>这里调用的是<code>今日诗词API</code>，是一个可以返回一句古诗词名句的接口。</p><p>它可以通过图片和 JSON 格式调用。今日诗词 API 根据不同地点、时间、节日、季节、天气、景观、城市进行智能推荐。</p><p>访问链接：<a href="https://www.jinrishici.com/">https://www.jinrishici.com</a></p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;创建组件&quot;&gt;&lt;a href=&quot;#创建组件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="主题" scheme="http://example.com/tags/%E4%B8%BB%E9%A2%98/"/>
+    
+    <category term="诗词" scheme="http://example.com/tags/%E8%AF%97%E8%AF%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字数统计</title>
+    <link href="http://example.com/posts/d4c1.html"/>
+    <id>http://example.com/posts/d4c1.html</id>
+    <published>2026-01-08T05:52:15.000Z</published>
+    <updated>2026-01-08T06:02:56.385Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h3><p>要为 AnZhiYu 配上字数统计特性, 你需要如下几个步骤:</p><p>打开 hexo 工作目录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-wordcount --save or yarn add hexo-wordcount</span><br></pre></td></tr></table></figure><p>修改 主题配置文件:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wordcount:</span><br><span class="line">  enable: true</span><br><span class="line">  post_wordcount: true</span><br><span class="line">  min2read: true</span><br><span class="line">  total_wordcount: true</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;字数统计&quot;&gt;&lt;a href=&quot;#字数统计&quot; class=&quot;headerlink&quot; title=&quot;字数统计&quot;&gt;&lt;/a&gt;字数统计&lt;/h3&gt;&lt;p&gt;要为 AnZhiYu 配上字数统计特性, 你需要如下几个步骤:&lt;/p&gt;
+&lt;p&gt;打开 hexo 工作目录&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="统计" scheme="http://example.com/tags/%E7%BB%9F%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>永久链接</title>
+    <link href="http://example.com/posts/fb4c.html"/>
+    <id>http://example.com/posts/fb4c.html</id>
+    <published>2026-01-07T06:01:36.000Z</published>
+    <updated>2026-01-08T01:35:11.503Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="文章生成永久链接"><a href="#文章生成永久链接" class="headerlink" title="文章生成永久链接"></a>文章生成永久链接</h1><p>使用 hexo-abbrlink 的 Hexo 插件来实现文章生成永久链接，安装命令如下：<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure><br>在 Hexo <code>根目录下的 _config.yml</code> 文件中，新增以下的配置项：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">abbrlink: </span><br><span class="line">    alg: crc16   #算法：</span><br><span class="line">    rep: hex     #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制</span><br></pre></td></tr></table></figure><p>将 <code>_config.yml</code> 文件中的 <code>permalink</code> 的值修改为如下内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink</span><br></pre></td></tr></table></figure><p>执行 <code>hexo clean &amp;&amp; hexo g </code>重新生成博客文件，就可以生成永久链接。生成完后，原 md 文件的 Front-matter 内会增加 abbrlink 字段，值为生成的 ID 。</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;文章生成永久链接&quot;&gt;&lt;a href=&quot;#文章生成永久链接&quot; class=&quot;headerlink&quot; title=&quot;文章生成永久链接&quot;&gt;&lt;/a&gt;文章生成永久链接&lt;/h1&gt;&lt;p&gt;使用 hexo-abbrlink 的 Hexo 插件来实现文章生成永久链接，安装命令如下：&lt;br&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-hexo -永久链接 -git -anzhiyu" scheme="http://example.com/tags/hexo-%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5-git-anzhiyu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>anzhiyu页面配置</title>
+    <link href="http://example.com/posts/1446.html"/>
+    <id>http://example.com/posts/1446.html</id>
+    <published>2026-01-07T05:45:53.000Z</published>
+    <updated>2026-01-08T01:35:11.504Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="页面配置"><a href="#页面配置" class="headerlink" title="页面配置"></a>页面配置</h1><h2 id="标签页配置"><a href="#标签页配置" class="headerlink" title="标签页配置"></a>标签页配置</h2><p>前往你的 Hexo 博客的根目录<br>在 Hexo 博客根目录 <code>[blog]</code>下打开终端，输入</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure><p>你会找到 <code>source/tags/index.md</code> 这个文件</p><p>修改这个文件： 记得添加 <code>type: &quot;tags&quot;</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">markdown</span><br><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">date: 2021-04-06 12:01:51</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">top_img: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;页面配置&quot;&gt;&lt;a href=&quot;#页面配置&quot; class=&quot;headerlink&quot; title=&quot;页面配置&quot;&gt;&lt;/a&gt;页面配置&lt;/h1&gt;&lt;h2 id=&quot;标签页配置&quot;&gt;&lt;a href=&quot;#标签页配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-hexo -页面配置 -git -anzhiyu" scheme="http://example.com/tags/hexo-%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE-git-anzhiyu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>anzhiyu主题配置</title>
+    <link href="http://example.com/posts/3969.html"/>
+    <id>http://example.com/posts/3969.html</id>
+    <published>2026-01-07T03:17:42.000Z</published>
+    <updated>2026-01-08T01:35:11.502Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="主题安装"><a href="#主题安装" class="headerlink" title="主题安装"></a>主题安装</h3><h1 id="方式一-Github-推荐"><a href="#方式一-Github-推荐" class="headerlink" title="方式一(Github 推荐):"></a>方式一(Github 推荐):</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure><p>如遇安装不上可以使用以下url代理安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b main https://ghproxy.com/https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure><p>测试版Dev</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b dev https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure><p>应用主题<br>打开 Hexo 根目录下的 config.yml, 找到以下配置项，把主题改为anzhiyu</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: anzhiyu</span><br></pre></td></tr></table></figure><p>安装 pug 和 stylus 渲染插件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure><p>覆盖配置<br>覆盖配置可以使主题配置放置在 anzhiyu 目录之外，避免在更新主题时丢失自定义的配置。</p><p>通过 Npm 安装主题的用户可忽略，其他用户建议学习使用。</p><p>macos&#x2F;linux 在博客根目录运行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml</span><br></pre></td></tr></table></figure><p>本地启动 hexo</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;主题安装&quot;&gt;&lt;a href=&quot;#主题安装&quot; class=&quot;headerlink&quot; title=&quot;主题安装&quot;&gt;&lt;/a&gt;主题安装&lt;/h3&gt;&lt;h1 id=&quot;方式一-Github-推荐&quot;&gt;&lt;a href=&quot;#方式一-Github-推荐&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="主题配置" scheme="http://example.com/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+    <category term="anzhiyu" scheme="http://example.com/tags/anzhiyu/"/>
+    
+  </entry>
+  
+</feed>
