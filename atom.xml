@@ -192,11 +192,11 @@
     
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
+    <category term="页面配置" scheme="http://example.com/tags/%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE/"/>
+    
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="anzhiyu" scheme="http://example.com/tags/anzhiyu/"/>
-    
-    <category term="页面配置" scheme="http://example.com/tags/%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -223,11 +223,11 @@
     
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
-    <category term="主题配置" scheme="http://example.com/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
-    
     <category term="git" scheme="http://example.com/tags/git/"/>
     
     <category term="anzhiyu" scheme="http://example.com/tags/anzhiyu/"/>
+    
+    <category term="主题配置" scheme="http://example.com/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
